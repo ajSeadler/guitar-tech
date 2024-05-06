@@ -1,8 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import ServicesCards from "./ServicesCards";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 
 const Home = () => {
+  const [showScrollDownText, setShowScrollDownText] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      setShowScrollDownText(scrollPosition === 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <div className="hero">
@@ -29,6 +44,34 @@ const Home = () => {
         </motion.div>
       </div>
       <ServicesCards />
+      {showScrollDownText && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 2.5, type: "spring", stiffness: 200, damping: 10 }}
+          className="scroll-down-container"
+          style={{
+            position: "fixed",
+            zIndex: 3,
+            bottom: "20px",
+            left: "50px",
+            right:'50px',
+            transform: "translateX(-50%)",
+            color: "#fff",
+            fontSize: "16px",
+            fontWeight: 100,
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
+            padding: "10px 20px",
+            borderRadius: "5px",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <div style={{ margin: "5px" }}>Scroll down</div>
+          <ArrowDownwardIcon fontSize="small" />
+        </motion.div>
+      )}
     </>
   );
 };
