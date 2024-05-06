@@ -24,7 +24,7 @@ const AnimatedHeading = ({ children }) => {
 
 const ServiceCard = ({ title, subtitle, content, price, image, to }) => {
   const { ref, inView } = useInView({
-    threshold: 0.3,
+    threshold: 0.1,
     rootMargin: "-100px 0px",
   });
 
