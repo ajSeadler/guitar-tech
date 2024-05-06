@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const AnimatedHeading = ({ children }) => {
   const { ref, inView } = useInView({
-    threshold: 0.2,
+    threshold: 0.1,
     rootMargin: "-100px 0px",
   });
 
@@ -39,7 +39,7 @@ const ServiceCard = ({ title, subtitle, content, price, image, to }) => {
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.5, delay: nextCardInView.inView ? 0 : 0.5 }}
+      transition={{ duration: 0.3, delay: nextCardInView.inView ? 0 : 0.5 }}
       className="card"
       style={{ borderRadius: 0 }}
     >
@@ -57,9 +57,10 @@ const ServiceCard = ({ title, subtitle, content, price, image, to }) => {
 
 const ServicesCards = () => {
   return (
-    <div>
-      <AnimatedHeading>Quality Services for Your Guitars</AnimatedHeading>
+   
+      <>   
       <div className="services-container">
+      <AnimatedHeading>Quality Services for Your Guitars</AnimatedHeading>
         <ServiceCard
           title="Basic Clean and Restring"
           subtitle="Quick and easy, in and out"
@@ -85,7 +86,7 @@ const ServicesCards = () => {
           to="/fret-work"
         />
       </div>
-    </div>
+    </>
   );
 };
 
