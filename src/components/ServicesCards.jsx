@@ -14,7 +14,7 @@ const AnimatedHeading = ({ children }) => {
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.5, delay: 0.5 }}
       className="services-heading"
     >
       {children}
@@ -28,12 +28,18 @@ const ServiceCard = ({ title, subtitle, content, price, image, to }) => {
     rootMargin: "-100px 0px",
   });
 
+  const nextCardInView = useInView({
+    threshold: 0.1,
+    rootMargin: "-100px 0px",
+    triggerOnce: true,
+  });
+
   return (
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.5, delay: nextCardInView.inView ? 0 : 0.5 }}
       className="card"
       style={{ borderRadius: 0 }}
     >
@@ -42,7 +48,9 @@ const ServiceCard = ({ title, subtitle, content, price, image, to }) => {
       <div className="content">{content}</div>
       <img src={image} alt={title} className="card-image" />
       <div className="price">{price}</div>
-      <Link to={to} className="learn-more" style={{color:"grey"}}>Learn More</Link>
+      <Link to={to} className="learn-more" style={{ color: "grey" }}>
+        Learn More
+      </Link>
     </motion.div>
   );
 };

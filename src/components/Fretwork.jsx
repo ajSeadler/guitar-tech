@@ -1,25 +1,25 @@
 import React from "react";
 import { Typography, Paper, List, ListItem, ListItemText } from "@mui/material";
 
-const Setup = () => {
+const Fretwork = () => {
   return (
     <Paper elevation={3} className="tier-one-info" style={{ padding: "20px" }}>
       <Typography variant="h4" gutterBottom fontWeight={100}>
-        Full Guitar Setup
+        Fretwork and Neck Adjustment
       </Typography>
       <Typography variant="body1" paragraph fontWeight={100}>
-        Our Full Guitar Setup service is designed for those seeking a comprehensive overhaul to optimize their instrument's performance. OK Guitar Tech will ensure every aspect of your guitar is meticulously inspected, adjusted, and perfected.
+        Our Fretwork and Neck Adjustment service is tailored for those seeking precision and playability enhancements for their guitar's fretboard and neck. OK Guitar Tech meticulously inspects, levels, crowns, and polishes frets to ensure optimal performance.
       </Typography>
       <Typography variant="h5" gutterBottom fontWeight={100}>
         What's Included:
       </Typography>
       <List>
         {[
-          "Thorough cleaning of the guitar body and strings",
-          "Intonation adjustment for precise tuning across the fretboard",
-          "Electronics check and cleanup",
-          "Adjust guitar action",
+          "Complete fretboard inspection and assessment",
+          "Fret leveling, crowning, and polishing for smooth playability",
+          "Neck adjustment for optimal action and playability",
           "Truss rod adjustment for ideal neck relief",
+          "Fretboard cleaning and conditioning for enhanced durability",
         ].map((service, index) => (
           <ListItem key={index}>
             <ListItemText primary={service} />
@@ -33,4 +33,4 @@ const Setup = () => {
   );
 };
 
-export default Setup;
+export default Fretwork;
