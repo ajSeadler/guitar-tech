@@ -44,6 +44,7 @@
 /* Services Section */
 .services-heading {
   text-align: center;
+  background-color: #f0f0f0;;
   font-weight: 100;
   font-size: 2rem;
   color: #333;
@@ -61,6 +62,18 @@
   padding: 50px 20px;
   margin: auto;
   flex-wrap: wrap;
+  background-color: #f0f0f0;
+}
+
+.services-container-all {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column !important;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .card {
@@ -187,6 +200,10 @@
   .tier-one-info {
     padding: 20px;
     margin-top: 15%;
-    width: 100vw;
+    width: 100%;
+  }
+
+  .services-container-all {
+    width: 100%;
   }
 }

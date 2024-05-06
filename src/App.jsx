@@ -6,6 +6,8 @@ import NavBar from './components/NavBar';
 import TierOne from './components/TierOne';
 import Setup from './components/Setup';
 import Fretwork from './components/Fretwork';
+import Services from './components/Services';
+
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -25,6 +27,7 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/services' element={<Services />} />
           <Route path='/clean-and-restring' element={<TierOne />} />
           <Route path='/setup' element={<Setup />} />
           <Route path='/fret-work' element={<Fretwork />} />
