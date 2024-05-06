@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
 const AnimatedHeading = ({ children }) => {
@@ -25,7 +26,7 @@ const AnimatedHeading = ({ children }) => {
 const ServiceCard = ({ title, subtitle, content, price, image, to }) => {
   const { ref, inView } = useInView({
     threshold: 0.1,
-    rootMargin: "-100px 0px",
+    rootMargin: "-50px 0px",
   });
 
   const nextCardInView = useInView({
@@ -47,20 +48,35 @@ const ServiceCard = ({ title, subtitle, content, price, image, to }) => {
       <div className="subtitle">{subtitle}</div>
       <div className="content">{content}</div>
       <img src={image} alt={title} className="card-image" />
-      <div className="price">{price}</div>
-      <Link to={to} className="learn-more" style={{ color: "grey" }}>
-        Learn More
-      </Link>
+      <div className="price" style={{ margin: "10px" }}>
+        {price}
+      </div>
+      <Button
+        component={Link}
+        to={to}
+        variant="contained"
+        sx={{
+          color: "#fff",
+          backgroundColor: "black",
+          padding: "5px",
+          borderRadius: '10px',
+          "&:hover": {
+            backgroundColor: "white",
+            color:'#000'
+          },
+        }}
+      >
+        See More
+      </Button>
     </motion.div>
   );
 };
 
 const ServicesCards = () => {
   return (
-   
-      <>   
+    <>
       <div className="services-container">
-      <AnimatedHeading>Quality Services for Your Guitars</AnimatedHeading>
+        <AnimatedHeading>Quality Services for Your Guitars</AnimatedHeading>
         <ServiceCard
           title="Basic Clean and Restring"
           subtitle="Quick and easy, in and out"

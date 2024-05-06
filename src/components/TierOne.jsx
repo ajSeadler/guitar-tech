@@ -3,7 +3,7 @@ import { Typography, Paper, List, ListItem, ListItemText } from "@mui/material";
 
 const TierOne = () => {
   return (
-    <Paper elevation={3} className="tier-one-info" style={{ padding: "20px", fontWeight: 200 }}>
+    <Paper elevation={0} className="tier-one-info" style={{ padding: "20px", fontWeight: 200 }}>
       <Typography variant="h4" gutterBottom fontWeight={100}>
         Basic Clean and Restring
       </Typography>

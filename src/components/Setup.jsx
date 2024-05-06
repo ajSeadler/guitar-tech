@@ -3,7 +3,7 @@ import { Typography, Paper, List, ListItem, ListItemText } from "@mui/material";
 
 const Setup = () => {
   return (
-    <Paper elevation={3} className="tier-one-info" style={{ padding: "20px" }}>
+    <Paper elevation={0} className="tier-one-info" style={{ padding: "20px" }}>
       <Typography variant="h4" gutterBottom fontWeight={100}>
         Full Guitar Setup
       </Typography>
