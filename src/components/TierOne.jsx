@@ -1,9 +1,16 @@
 import React from "react";
-import { Typography, Paper, List, ListItem, ListItemText } from "@mui/material";
+import { Typography, Paper, List, ListItem, ListItemText, Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+
 
 const TierOne = () => {
+  const navigate = useNavigate();
+
+  const handleGoBack = () => {
+    navigate(-1); // Navigate back one step in history
+  };
   return (
-    <Paper elevation={0} className="tier-one-info" style={{ padding: "20px", fontWeight: 200 }}>
+    <Paper elevation={0} className="tier-one-info">
       <Typography variant="h4" gutterBottom fontWeight={100}>
         Basic Clean and Restring
       </Typography>
@@ -15,7 +22,7 @@ const TierOne = () => {
       </Typography>
       <List>
         {[
-          "Thorough cleaning of the guitar body and strings",
+          "Thorough cleaning of the guitar body, neck, and headstock",
           "Restring with quailty strings",
           "Basic inspection of the instrument's condition",
         ].map((service, index) => (
@@ -27,6 +34,9 @@ const TierOne = () => {
       <Typography variant="body1" paragraph fontWeight={100}>
       OK Guitar Tech takes personalized care of your instrument to ensure it stays in prime condition. Regardless of your skill level, we're here to cater to your guitar's needs, ensuring it continues to sound and play its best.
       </Typography>
+      <Button onClick={handleGoBack} style={{ marginBottom: "10px" }}>
+        Back
+      </Button>
     </Paper>
   );
 };

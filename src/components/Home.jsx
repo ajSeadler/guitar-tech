@@ -27,12 +27,20 @@ const Home = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
+          <img src='/TECH-LOGO(white).png' alt="Logo" className="logo-img" />
           <motion.h1
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
+            style={{fontWeight:'300',}}
+          ></motion.h1>
+          <motion.h1
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            style={{fontWeight:'300',}}
           >
-            Welcome to <span style={{ color: "#fff", fontWeight: "bold" }}>OK</span>
+            Welcome to <span style={{ color: "#fff", fontWeight: "bold", color:'#fff' }}>OK</span>
             <span style={{ color: "#fff", fontWeight: 200 }}>Guitar Tech</span>
           </motion.h1>
           <motion.p
@@ -63,13 +71,14 @@ const Home = () => {
             fontWeight: 100,
             backgroundColor: "rgba(0, 0, 0, 0.5)",
             padding: "10px 20px",
+            margin:'20px',
             borderRadius: "5px",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
           }}
         >
-          <div style={{ margin: "5px" }}>Scroll down</div>
+          <div style={{ marginTop: "10px" }}>Scroll down</div>
           <ArrowDownwardIcon fontSize="small" />
         </motion.div>
       )}

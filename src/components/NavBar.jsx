@@ -43,11 +43,7 @@ const NavBar = () => {
     <>
       <StyledAppBar position="fixed" elevation={0}>
         <Toolbar>
-          <div className="nav-logo">
-            <span style={{ color: "#000", fontWeight: "bold" }}>OK</span>
-            <span style={{ color: "#000", fontWeight: 200 }}>Guitar Tech</span>
-          </div>
-          {/* <img src="/guitarShopLogo.png" alt="Logo" style={{ width: 40, height: 40 }} /> */}
+          <img src="/TECH-LOGO.png" alt="Logo" style={{ width: "auto", height: 100 }} />
           <div style={{ flexGrow: 1 }} />
           <IconButton
             edge="end"

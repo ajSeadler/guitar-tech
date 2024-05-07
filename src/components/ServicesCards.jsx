@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import Book from "./Book";
 
 const AnimatedHeading = ({ children }) => {
   const { ref, inView } = useInView({
@@ -57,8 +58,10 @@ const ServiceCard = ({ title, subtitle, content, price, image, to }) => {
         variant="contained"
         sx={{
           color: "#fff",
+          fontSize:'.8rem',
+          fontWeight:'bold',
           backgroundColor: "black",
-          padding: "5px",
+          padding: "8px",
           borderRadius: '10px',
           "&:hover": {
             backgroundColor: "white",
@@ -66,7 +69,7 @@ const ServiceCard = ({ title, subtitle, content, price, image, to }) => {
           },
         }}
       >
-        See More
+        Learn More
       </Button>
     </motion.div>
   );
@@ -76,7 +79,7 @@ const ServicesCards = () => {
   return (
     <>
       <div className="services-container">
-        <AnimatedHeading>Quality Services for Your Guitars</AnimatedHeading>
+        <AnimatedHeading>Quality Services for Your Instruments</AnimatedHeading>
         <ServiceCard
           title="Basic Clean and Restring"
           subtitle="Quick and easy, in and out"
@@ -101,6 +104,15 @@ const ServicesCards = () => {
           image="/fretw0k.jpeg"
           to="/fret-work"
         />
+        <ServiceCard
+          title="Pedalboard Maintnence and Customization"
+          subtitle="Clean pedals and cable managment"
+          content="Ensure your effects pedals stay in top condition with a thorough clean of pots, patch cables, and the pedalboard itself. Opt for a rewire using custom soldered cables."
+          price="$100-200"
+          image="/pedalboard.jpeg"
+          to="/pedalboard"
+        />
+        <Book />
       </div>
     </>
   );

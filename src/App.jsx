@@ -7,6 +7,7 @@ import TierOne from './components/TierOne';
 import Setup from './components/Setup';
 import Fretwork from './components/Fretwork';
 import Services from './components/Services';
+import Pedalboard from './components/Pedalboard';
 
 
 function ScrollToTop() {
@@ -31,6 +32,7 @@ function App() {
           <Route path='/clean-and-restring' element={<TierOne />} />
           <Route path='/setup' element={<Setup />} />
           <Route path='/fret-work' element={<Fretwork />} />
+          <Route path='/pedalboard' element={<Pedalboard />} />
         </Routes>
         <Footer />
       </div>
