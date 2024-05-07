@@ -71,7 +71,7 @@ const Home = () => {
             fontWeight: 100,
             backgroundColor: "rgba(0, 0, 0, 0.5)",
             padding: "10px 20px",
-            margin:'20px',
+            margin:'0px',
             borderRadius: "5px",
             display: "flex",
             flexDirection: "column",
