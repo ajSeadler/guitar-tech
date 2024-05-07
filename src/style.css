@@ -148,7 +148,7 @@
 
 @media (max-width: 480px) {
 .logo-img {
-  width: 130vw;
+  width: 100vw;
   height: auto;
 }
 
@@ -187,7 +187,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 20px;
     background-color: #000;
   }
 
