@@ -43,7 +43,7 @@ const NavBar = () => {
     <>
       <StyledAppBar position="fixed" elevation={0}>
         <Toolbar>
-          <img src="/TECH-LOGO.png" alt="Logo" style={{ width: "auto", height: 100, margin:'0px', marginLeft:'-10%' }} />
+          <img src="/new-logo-black.png" alt="Logo" loading='lazy' style={{ width: "auto", height: 100, margin:'0px', marginLeft:'-10%' }} />
           <div style={{ flexGrow: 1 }} />
           <IconButton
             edge="end"
