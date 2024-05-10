@@ -43,7 +43,7 @@ const NavBar = () => {
     <>
       <StyledAppBar position="fixed" elevation={0}>
         <Toolbar>
-          <img src="/new-logo-black.png" alt="Logo" loading='lazy' style={{ width: "auto", height: 100, margin:'0px', marginLeft:'-10%' }} />
+          <img src="/TECH-LOGO.png" alt="Logo" loading='lazy' className="nav-logo" />
           <div style={{ flexGrow: 1 }} />
           <IconButton
             edge="end"
@@ -52,7 +52,7 @@ const NavBar = () => {
             onClick={handleDrawerOpen}
             sx={{ display: { xs: "block", md: "none" } }}
           >
-            <MenuIcon sx={{ color: "#000", fontSize:'2.5rem' }} />
+            <MenuIcon sx={{ color: "#000", fontSize:'2.5rem', margin:'10px' }} />
           </IconButton>
           <StyledDrawer
             anchor="right"
