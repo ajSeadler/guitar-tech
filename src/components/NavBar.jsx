@@ -99,7 +99,7 @@ const NavBar = () => {
               color="inherit"
               component={Link}
               to="/"
-              sx={{ display: { xs: "none", md: "initial" }, fontWeight: 100 }}
+              sx={{ display: { xs: "none", md: "initial" }, fontWeight: 'bold', fontSize:'1rem' }}
             >
               Home
             </Button>
@@ -107,7 +107,7 @@ const NavBar = () => {
               color="inherit"
               component={Link}
               to="/services"
-              sx={{ display: { xs: "none", md: "initial" }, fontWeight: 100 }}
+              sx={{ display: { xs: "none", md: "initial" }, fontWeight: 'bold', fontSize:'1rem' }}
             >
               Services
             </Button>
@@ -115,7 +115,7 @@ const NavBar = () => {
               color="inherit"
               component={Link}
               to="/about"
-              sx={{ display: { xs: "none", md: "initial" }, fontWeight: 100 }}
+              sx={{ display: { xs: "none", md: "initial" }, fontWeight: 'bold', fontSize:'1rem' }}
             >
               About
             </Button>
@@ -123,7 +123,7 @@ const NavBar = () => {
               color="inherit"
               component={Link}
               to="/contact"
-              sx={{ display: { xs: "none", md: "initial" }, fontWeight: 100 }}
+              sx={{ display: { xs: "none", md: "initial" }, fontWeight: 'bold', fontSize:'1rem' }}
             >
               Contact
             </Button>

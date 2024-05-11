@@ -43,13 +43,13 @@ const Home = () => {
             Welcome to <span style={{ color: "#fff", fontWeight: "bold", color:'#fff' }}>OK</span>
             <span style={{ color: "#fff", fontWeight: 200 }}>Guitar Tech</span>
           </motion.h1>
-          <motion.p
+          {/* <motion.p
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
           >
             Oklahoma's friendliest destination for professional guitar services
-          </motion.p>
+          </motion.p> */}
         </motion.div>
       </div>
       <ServicesCards />

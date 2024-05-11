@@ -9,7 +9,7 @@ import Pedalboard from './Pedalboard';
 const Services = () => {
   return (
     <div className='services-container-all'>
-      <TierOne />
+     <div className="tier" style={{marginTop:'12%'}}><TierOne /> </div> 
       <Setup />
       <Fretwork />
       <Pedalboard />

@@ -77,15 +77,15 @@ const Book = () => {
   
 
   return (
-    <div style={{ width: "90%", maxWidth: "400px", color: "white", margin: "0 auto", textAlign: "center", marginBottom: "5%" }}>
-      <Typography variant="h4" gutterBottom style={{ fontSize: "1.9rem", marginTop: "2rem", marginBottom: "1rem", color:'#000' }}>
+    <div style={{ width: "90%", maxWidth: "400px", margin: "0 auto", textAlign: "center", marginBottom: "5%" }}>
+      <Typography variant="h4" gutterBottom style={{ fontSize: "1.9rem", marginTop: "2rem", marginBottom: "1rem", color:'#fff' }}>
         Book An Appointment
       </Typography>
       <form ref={form} onSubmit={sendEmail}>
         <TextField
           label="Name"
           name="from_name"
-          variant="outlined"
+          variant="standard"
           fullWidth
           margin="normal"
         />
@@ -94,7 +94,7 @@ const Book = () => {
           label="Email"
           name="user_email"
           type="email"
-          variant="outlined"
+          variant="standard"
           fullWidth
           margin="normal"
         />
