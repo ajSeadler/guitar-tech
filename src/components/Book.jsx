@@ -77,7 +77,8 @@ const Book = () => {
   
 
   return (
-    <div style={{ width: "90%", maxWidth: "400px", margin: "0 auto", textAlign: "center", marginBottom: "5%", backgroundColor:'#fff' }}>
+    <div className="div" style={{backgroundColor:'#fff'}}>
+    <div style={{ width: "90%", maxWidth: "400px", margin: "0 auto", textAlign: "center", marginBottom: "5%", color:'#fff' }}>
       <Typography variant="h4" gutterBottom style={{ fontSize: "1.9rem", marginTop: "2rem", marginBottom: "1rem", color:'#000' }}>
         Book An Appointment
       </Typography>
@@ -139,6 +140,7 @@ const Book = () => {
         </Button>
       </form>
       {isSuccess && <Typography variant="body1" style={{ color: "green", marginTop: "1rem" }}>Message sent successfully! <br></br>Please allow 1-2 business days for a reply.</Typography>}
+    </div>
     </div>
   );
 };

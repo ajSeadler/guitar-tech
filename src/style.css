@@ -8,8 +8,7 @@
 }
 
 .nav-logo {
-  font-size: 1rem;
-  font-weight: 200;
+  width: 10%;
 }
 
 .logo-img {
@@ -89,10 +88,8 @@
 }
 
 .card {
-  background-color: #fff;
+  background-color: transparent;
   backdrop-filter: blur(5px);
-  border-radius: 8px;
-  box-shadow: 2px 2px 2px #fff;
   padding: 20px;
   margin: auto;
   width: 30%;
@@ -101,25 +98,27 @@
 
 .title {
   font-size: 24px;
+  color: #fff;
   font-weight: 300;
   margin-bottom: 10px;
 }
 
 .subtitle {
   font-size: 16px;
-  color: #666;
+  color: #fff;
   margin-bottom: 10px;
 }
 
 .content {
   font-size: 14px;
   margin: 10px;
-  color: #333;
+  color: #fff;
 }
 
 .card-image {
   width: 100%;
   height: auto;
+  border-radius: 10px;
   max-width: 100%; /* Ensure image doesn't exceed container width */
 }
 
@@ -222,7 +221,7 @@
 
   .tier-one-info {
     padding: 20px;
-    margin-top: 10% !important;
+    margin-top: 15% !important;
     width: 100%;
   }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import Book from "./Book";
 
@@ -42,18 +43,34 @@ const ServiceCard = ({ title, subtitle, content, price, image, to }) => {
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.3, delay: nextCardInView.inView ? 0 : 0.5 }}
       className="card"
+      style={{ borderRadius: 0 }}
     >
       <div className="title">{title}</div>
       <div className="subtitle">{subtitle}</div>
       <div className="content">{content}</div>
       <img src={image} alt={title} className="card-image" />
-      <div className="price">{price}</div>
-      <Link
+      <div className="price" style={{ margin: "10px" }}>
+        {price}
+      </div>
+      <Button
+        component={Link}
         to={to}
-        className="learn-more-button"
+        variant="contained"
+        sx={{
+          color: "#fff",
+          fontSize:'.8rem',
+          fontWeight:'bold',
+          backgroundColor: "#b50000",
+          padding: "8px",
+          borderRadius: '10px',
+          "&:hover": {
+            backgroundColor: "white",
+            color:'#000'
+          },
+        }}
       >
         Learn More
-      </Link>
+      </Button>
     </motion.div>
   );
 };
@@ -88,8 +105,8 @@ const ServicesCards = () => {
           to="/fret-work"
         />
         <ServiceCard
-          title="Pedalboard Maintenance and Customization"
-          subtitle="Clean pedals and cable management"
+          title="Pedalboard Maintnence and Customization"
+          subtitle="Clean pedals and cable managment"
           content="Ensure your effects pedals stay in top condition with a thorough clean of pots, patch cables, and the pedalboard itself. Opt for a rewire using custom soldered cables."
           price="$100-200"
           image="/pedalboard.jpeg"
