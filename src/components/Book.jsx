@@ -77,8 +77,8 @@ const Book = () => {
   
 
   return (
-    <div style={{ width: "90%", maxWidth: "400px", margin: "0 auto", textAlign: "center", marginBottom: "5%" }}>
-      <Typography variant="h4" gutterBottom style={{ fontSize: "1.9rem", marginTop: "2rem", marginBottom: "1rem", color:'#fff' }}>
+    <div style={{ width: "90%", maxWidth: "400px", margin: "0 auto", textAlign: "center", marginBottom: "5%", backgroundColor:'#fff' }}>
+      <Typography variant="h4" gutterBottom style={{ fontSize: "1.9rem", marginTop: "2rem", marginBottom: "1rem", color:'#000' }}>
         Book An Appointment
       </Typography>
       <form ref={form} onSubmit={sendEmail}>
@@ -133,7 +133,7 @@ const Book = () => {
         <Button
           type="submit"
           variant="contained"
-          style={{ marginTop: "2rem", backgroundColor: "#000", color: "#fff" }}
+          style={{ marginTop: "2rem", backgroundColor: "#b50000", color: "#fff" }}
         >
           Send
         </Button>

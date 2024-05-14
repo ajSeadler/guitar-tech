@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   AppBar,
   Toolbar,
@@ -15,10 +15,15 @@ import { Link } from "react-router-dom";
 import { styled } from "@mui/system";
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
-  backdropFilter: "blur(8px)",
-  backgroundColor: "rgba(255, 255, 255, 0.5)", // Adjust opacity as needed
+  backdropFilter: "blur(2px)",
+  padding: "0px",
+  backgroundColor: "transparent", // Adjust opacity as needed
   boxShadow: "none",
-  color: "#000",
+  color: "#fff",
+  transition: "transform 0.3s ease", // Add transition for smooth animation
+  position: "fixed",
+  width: "100%",
+  zIndex: 1000,
 }));
 
 const StyledDrawer = styled(Drawer)(({ theme }) => ({
@@ -30,6 +35,21 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
 
 const NavBar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleScroll = () => {
+    const currentScrollPos = window.scrollY;
+    setVisible(prevScrollPos > currentScrollPos || currentScrollPos <= 0);
+    setPrevScrollPos(currentScrollPos);
+  };
 
   const handleDrawerOpen = () => {
     setDrawerOpen(true);
@@ -41,9 +61,13 @@ const NavBar = () => {
 
   return (
     <>
-      <StyledAppBar position="fixed" elevation={0}>
+      <StyledAppBar
+        position="fixed"
+        elevation={0}
+        style={{ transform: visible ? "translateY(0)" : "translateY(-100%)" }}
+      >
         <Toolbar>
-          <img src="/TECH-LOGO.png" alt="Logo" loading='lazy' className="nav-logo" />
+          <h2 className="nav-logo">OK GUITAR TECH</h2>
           <div style={{ flexGrow: 1 }} />
           <IconButton
             edge="end"
@@ -52,7 +76,9 @@ const NavBar = () => {
             onClick={handleDrawerOpen}
             sx={{ display: { xs: "block", md: "none" } }}
           >
-            <MenuIcon sx={{ color: "#000", fontSize:'2.5rem', margin:'10px' }} />
+            <MenuIcon
+              sx={{ color: "#fff", fontSize: "2.5rem", margin: "10px" }}
+            />
           </IconButton>
           <StyledDrawer
             anchor="right"
@@ -94,12 +120,22 @@ const NavBar = () => {
               </ListItem>
             </List>
           </StyledDrawer>
-          <div style={{ display: "flex", gap: "20px", alignItems: "center" }}>
+          <div
+            style={{
+              display: "flex",
+              gap: "20px",
+              alignItems: "center",
+            }}
+          >
             <Button
               color="inherit"
               component={Link}
               to="/"
-              sx={{ display: { xs: "none", md: "initial" }, fontWeight: 'bold', fontSize:'1rem' }}
+              sx={{
+                display: { xs: "none", md: "initial" },
+                fontWeight: "bold",
+                fontSize: "1rem",
+              }}
             >
               Home
             </Button>
@@ -107,7 +143,11 @@ const NavBar = () => {
               color="inherit"
               component={Link}
               to="/services"
-              sx={{ display: { xs: "none", md: "initial" }, fontWeight: 'bold', fontSize:'1rem' }}
+              sx={{
+                display: { xs: "none", md: "initial" },
+                fontWeight: "bold",
+                fontSize: "1rem",
+              }}
             >
               Services
             </Button>
@@ -115,7 +155,11 @@ const NavBar = () => {
               color="inherit"
               component={Link}
               to="/about"
-              sx={{ display: { xs: "none", md: "initial" }, fontWeight: 'bold', fontSize:'1rem' }}
+              sx={{
+                display: { xs: "none", md: "initial" },
+                fontWeight: "bold",
+                fontSize: "1rem",
+              }}
             >
               About
             </Button>
@@ -123,7 +167,11 @@ const NavBar = () => {
               color="inherit"
               component={Link}
               to="/contact"
-              sx={{ display: { xs: "none", md: "initial" }, fontWeight: 'bold', fontSize:'1rem' }}
+              sx={{
+                display: { xs: "none", md: "initial" },
+                fontWeight: "bold",
+                fontSize: "1rem",
+              }}
             >
               Contact
             </Button>

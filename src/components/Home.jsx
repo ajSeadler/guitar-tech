@@ -27,7 +27,7 @@ const Home = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          <img src='/TECH-LOGO-white.png' alt="Logo" className="logo-img" />
+          <img src='/tele-logo.png' alt="Logo" className="logo-img" />
           <motion.h1
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
