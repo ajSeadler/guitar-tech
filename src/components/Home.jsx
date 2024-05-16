@@ -34,7 +34,7 @@ const Home = () => {
             transition={{ duration: 1, delay: 0.5 }}
             style={{fontWeight:'300',}}
           ></motion.h1>
-          <motion.h1
+          {/* <motion.h1
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
@@ -42,7 +42,7 @@ const Home = () => {
           >
             Welcome to <span style={{ color: "#fff", fontWeight: "bold", color:'#fff' }}>OK</span>
             <span style={{ color: "#fff", fontWeight: 200 }}>Guitar Tech</span>
-          </motion.h1>
+          </motion.h1> */}
           {/* <motion.p
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

@@ -15,9 +15,8 @@ import { Link } from "react-router-dom";
 import { styled } from "@mui/system";
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
-  backdropFilter: "blur(2px)",
   padding: "0px",
-  backgroundColor: "transparent", // Adjust opacity as needed
+  backgroundColor: "#000", // Adjust opacity as needed
   boxShadow: "none",
   color: "#fff",
   transition: "transform 0.3s ease", // Add transition for smooth animation
