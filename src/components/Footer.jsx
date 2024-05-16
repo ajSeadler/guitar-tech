@@ -9,6 +9,7 @@ const FooterContainer = styled('footer')({
 
 const FooterContent = styled('div')({
   maxWidth: '1200px',
+  backgroundColor:'#f8f8f8',
   margin: '0 auto',
   display: 'flex',
   justifyContent: 'space-between',
@@ -18,12 +19,14 @@ const FooterContent = styled('div')({
 
 const FooterSection = styled('div')({
   flex: '0 0 25%',
+  backgroundColor:'#f8f8f8',
   minWidth: '250px',
   margin: '0 10px',
 });
 
 const FooterHeader = styled('h3')({
   color: '#333',
+  backgroundColor:'#f8f8f8',
   fontSize: '18px',
   fontWeight: 'bold',
   marginBottom: '20px',
@@ -31,6 +34,7 @@ const FooterHeader = styled('h3')({
 
 const FooterLink = styled('a')({
   display: 'block',
+  backgroundColor:'#f8f8f8',
   fontFamily:'sans-serif',
   color: '#333',
   textDecoration: 'none',
@@ -44,7 +48,7 @@ const FooterLink = styled('a')({
 
 const Footer = () => {
   return (
-    <FooterContainer>
+    <FooterContainer >
       <FooterContent>
         <FooterSection>
           <FooterHeader>Customer Service</FooterHeader>

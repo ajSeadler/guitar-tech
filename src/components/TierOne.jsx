@@ -10,6 +10,8 @@ const TierOne = () => {
     navigate(-1); // Navigate back one step in history
   };
   return (
+    <>
+    <div style={{width:'100vw', backgroundColor:'#000', margin:'0px', padding:'20px' }}>
     <Paper elevation={0} className="tier-one-info">
       <Typography variant="h4" gutterBottom fontWeight={100}>
         Basic Clean and Restring
@@ -38,6 +40,8 @@ const TierOne = () => {
         Back
       </Button>
     </Paper>
+    </div>
+    </>
   );
 };
 

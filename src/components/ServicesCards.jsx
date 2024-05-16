@@ -43,7 +43,7 @@ const ServiceCard = ({ title, subtitle, content, price, image, to }) => {
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.3, delay: nextCardInView.inView ? 0 : 0.5 }}
       className="card"
-      style={{ borderRadius: 0 }}
+      style={{ borderRadius: 0, background: 'transparent', color: '#fff' }}
     >
       <div className="title">{title}</div>
       <div className="subtitle">{subtitle}</div>
@@ -60,7 +60,7 @@ const ServiceCard = ({ title, subtitle, content, price, image, to }) => {
           color: "#fff",
           fontSize:'.8rem',
           fontWeight:'bold',
-          backgroundColor: "#b50000",
+          backgroundColor: "red",
           padding: "8px",
           borderRadius: '10px',
           "&:hover": {
