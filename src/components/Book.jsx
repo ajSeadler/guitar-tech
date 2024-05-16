@@ -143,7 +143,7 @@ const Book = () => {
           <Button
             type="submit"
             variant="contained"
-            style={{ marginTop: "2rem", backgroundColor: "#b50000", color: "#fff" }}
+            style={{ marginTop: "2rem", backgroundColor: "transparent", color: "#000", border:'2px solid black', borderRadius:'20px', }}
           >
             Send
           </Button>

@@ -58,7 +58,7 @@
   background-color: transparent;;
   font-weight: 200;
   font-size: 2rem;
-  color: #fff;
+  color: #000;
   margin: auto;
   padding: 20px;
 }
@@ -74,7 +74,7 @@
   padding: 50px 20px;
   margin: auto;
   flex-wrap: wrap;
-  background-color: #000;
+  background-color: #fff;
 }
 
 .services-container-all {
@@ -82,8 +82,9 @@
   justify-content: space-between;
   flex-direction: column !important;
   align-items: center;
+  margin-top: -10%;
   padding: 20px;
-  background-color: #000;
+  background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -97,22 +98,22 @@
 }
 
 .title {
-  font-size: 24px;
-  color: #fff;
+  font-size: 1.7rem;
+  color: #000;
   font-weight: 300;
   margin-bottom: 10px;
 }
 
 .subtitle {
-  font-size: 16px;
-  color: #fff;
+  font-size: 1.4rem;
+  color: #000;
   margin-bottom: 10px;
 }
 
 .content {
-  font-size: 14px;
+  font-size: 1rem;
   margin: 10px;
-  color: #fff;
+  color: #000;
 }
 
 .card-image {
@@ -126,12 +127,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #000 !important;
-  color: #fff !important;
   font-weight: 200;
   margin: auto;
   margin-top: 8%;
-  width: 70vw;
+  width: 60vw;
   padding: 20px;
 
 }
@@ -174,7 +173,7 @@
 
 @media (max-width: 480px) {
 .logo-img {
-  width: 250%;
+  width: 200%;
   height: auto;
 }
 
@@ -203,13 +202,9 @@
   }
 
   .title {
-    font-size: 1.2rem;
     margin-bottom: 8px;
   }
 
-  .content {
-    font-size: .9rem;
-  }
 
   .hero {
     height: 100vh;

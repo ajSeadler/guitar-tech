@@ -59,10 +59,12 @@ const ServiceCard = ({ title, subtitle, content, price, image, to }) => {
         sx={{
           color: "#fff",
           fontSize:'.8rem',
+          border:'2px solid black',
           fontWeight:'bold',
-          backgroundColor: "red",
+          backgroundColor: "transparent",
+          color:'#000',
           padding: "8px",
-          borderRadius: '10px',
+          borderRadius: '20px',
           "&:hover": {
             backgroundColor: "white",
             color:'#000'
