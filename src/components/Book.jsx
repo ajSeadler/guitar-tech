@@ -94,7 +94,7 @@ const Book = () => {
           />
           {validationErrors.name && <Typography variant="body2" style={{ color: "red", marginTop: "0.5rem" }}>{validationErrors.name}</Typography>}
           <TextField
-            label="Email"
+            label="Email (for contact purposes)"
             name="email_id"
             type="email"
             variant="standard"

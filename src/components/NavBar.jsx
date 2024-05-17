@@ -66,7 +66,7 @@ const NavBar = () => {
         style={{ transform: visible ? "translateY(0)" : "translateY(-100%)" }}
       >
         <Toolbar>
-          <img src="/TECH-LOGO-white.png" alt="" className="nav-logo"/>
+          <img src="/TECH-LOGO-gold.png" alt="" className="nav-logo"/>
           <div style={{ flexGrow: 1 }} />
           <IconButton
             edge="end"
